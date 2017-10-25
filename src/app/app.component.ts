@@ -11,7 +11,10 @@ export class AppComponent {
   constructor(private newService: MyDataService){}
 
   ngOnInit() {
-    this.newService.obj.name = "Leo"
-    console.log(this.newService.obj.name)
+    // // Estas dos líneas de la creación normal de servicios
+    // this.newService.obj.name = "Leo"
+    // console.log(this.newService.obj.name)
+
+    this.newService.fetchData();
   }
 }
